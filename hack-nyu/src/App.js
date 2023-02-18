@@ -1,12 +1,29 @@
 import './App.css';
-import Background from './components/Background';
-import Main from './pages/Main';
+import { Route, Routes } from 'react-router-dom';
+import Protected from './components/Protected';
+import { AuthContextProvider } from './context/GoogleAuth';
+import Login from './pages/Login';
+import Main from './pages/Main'
+
 
 function App() {
   return (
-    <div className="App">
-      <Main />
-    </div>
+    <div>
+    <AuthContextProvider>    
+      <Routes>
+        <Route path='/' element={<Login />} />
+        
+        <Route
+          path='/Main'
+          element={
+            <Protected>
+              <Main />
+            </Protected>
+          }
+        />
+      </Routes>
+    </AuthContextProvider>
+  </div>
   );
 }
 
