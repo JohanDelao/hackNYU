@@ -41,7 +41,8 @@ Blueprint:
 </div>
 
 ## Video Demonstration
-![ZenDoc Video]()
+https://user-images.githubusercontent.com/88301319/219952882-cfc877b8-317f-4b32-868c-93a05149c8aa.mp4
+
 
 ## Setup
 
