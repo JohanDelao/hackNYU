@@ -102,15 +102,16 @@ const Main = () => {
     let seven = document.getElementById("questionSevenValue");
     let eight = document.getElementById("questionEightValue");
     let date = document.getElementById("date");
-    if (results[0]) {
-      first.innerHTML = results[0].questionOneAnswer;
-      second.innerHTML = results[0].questionTwoAnswer;
-      third.innerHTML = results[0].questionThreeAnswer;
-      four.innerHTML = results[0].questionFourAnswer;
-      five.innerHTML = results[0].questionFiveAnswer;
-      six.innerHTML = results[0].questionSixAnswer;
-      seven.innerHTML = results[0].questionSevenAnswer;
-      eight.innerHTML = results[0].questionEightAnswer;
+    // let length = results.length;
+    if (results[results.length-1]) {
+      first.innerHTML = results[results.length-1].questionOneAnswer;
+      second.innerHTML = results[results.length-1].questionTwoAnswer;
+      third.innerHTML = results[results.length-1].questionThreeAnswer;
+      four.innerHTML = results[results.length-1].questionFourAnswer;
+      five.innerHTML = results[results.length-1].questionFiveAnswer;
+      six.innerHTML = results[results.length-1].questionSixAnswer;
+      seven.innerHTML = results[results.length-1].questionSevenAnswer;
+      eight.innerHTML = results[results.length-1].questionEightAnswer;
       date.innerHTML = "2" + "/" + d + "/2023";
     }else{
       first.innerHTML = "No Response Recorded";
