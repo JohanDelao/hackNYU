@@ -344,7 +344,25 @@
   top: 15rem;
   background-color: white;
   display: none;
+  padding: 1rem;
+  border: 2px solid black;
 }
 .modal.show{
   display: block;
+}
+.modal h3{
+  text-align: left;
+  font-weight: 600;
+}
+.modal p{
+  text-align: left;
+}
+#date{
+  margin-bottom: 1rem;
+}
+#X{
+  position: fixed;
+  top: 16rem;
+  right: 29rem;
+  cursor: pointer;
 }
