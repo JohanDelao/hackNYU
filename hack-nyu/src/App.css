@@ -149,6 +149,15 @@
     backdrop-filter: blur(10px);
     margin: 100px auto 40px;
 }
+.main-card {
+  width: fit-content;
+  padding: 50px 30px 64px;
+  border-radius: 1.25rem;
+  background: rgba(0, 0, 0, 0.5);
+  /* text-align: center; */
+  backdrop-filter: blur(10px);
+  margin: 100px auto 40px auto;
+}
   
 .login-card > h2 {
     font-size: 36px;

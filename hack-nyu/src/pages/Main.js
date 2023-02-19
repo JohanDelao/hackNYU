@@ -1,7 +1,7 @@
-import React from 'react';
-import { UserAuth } from '../context/GoogleAuth';
-import { useNavigate } from 'react-router-dom';
-import Form from "../components/Form"
+import React from "react";
+import { UserAuth } from "../context/GoogleAuth";
+import { useNavigate } from "react-router-dom";
+import Form from "../components/Form";
 
 const Main = () => {
   const { logOut, user } = UserAuth();
@@ -24,49 +24,44 @@ const Main = () => {
   };*/
 
   return (
-    <div className='body1'>
-      <div className="area" >
-                        <ul className="circles">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                        </ul>
-                        
-            
-        <div className="login-card">
-            
-            <div>
-              <p className="welcome">Welcome, {user?.displayName}</p>
-              <button onClick={handleSignOut} className="logoutBtn">
-                Logout
-              </button>
+    <div className="body1">
+      <div className="area">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+        <div className="main-card">
+          <div>
+            <p className="welcome">Welcome, {user?.displayName}</p>
+            <button onClick={handleSignOut} className="logoutBtn">
+              Logout
+            </button>
+          </div>
+
+          <div className="innerMain">
+            <h1 id="lastSeven">Last 7 Days</h1>
+            <div className="formBoxes">
+              <div className="formBox">2/18/2023</div>
+              <div className="formBox">2/18/2023</div>
+              <div className="formBox">2/18/2023</div>
+              <div className="formBox">2/18/2023</div>
+              <div className="formBox">2/18/2023</div>
+              <div className="formBox">2/18/2023</div>
+              <div className="formBox">2/18/2023</div>
             </div>
-            
-            /*<div className="innerMain">
-                                <h1 id="lastSeven">Last 7 Days</h1>
-                                <div className="formBoxes">
-                                    <div className="formBox">2/18/2023</div>
-                                    <div className="formBox">2/18/2023</div>
-                                    <div className="formBox">2/18/2023</div>
-                                    <div className="formBox">2/18/2023</div>
-                                    <div className="formBox">2/18/2023</div>
-                                    <div className="formBox">2/18/2023</div>
-                                    <div className="formBox">2/18/2023</div>
-                                </div>
-                                <Form />
-                            </div>*/
-            
+            <Form />
+          </div>
         </div>
-        
-        
-      </div >
+      </div>
     </div>
   );
 };
