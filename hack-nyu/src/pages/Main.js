@@ -80,7 +80,7 @@ const Main = () => {
   //   return unsubscribe;
   // }
 
-  function openForm(m, d){
+  function openForm(m, d){ 
     console.log(posts)
     console.log(m)
     console.log(d)
