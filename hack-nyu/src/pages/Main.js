@@ -61,8 +61,8 @@ const Main = () => {
   function getMonthName(monthNumber) {
     const date = new Date();
     date.setMonth(monthNumber - 1);
-  
-    return date.toLocaleString('en-US', { month: 'long' });
+
+    return date.toLocaleString("en-US", { month: "long" });
   }
 
   const date = new Date();
@@ -84,19 +84,52 @@ const Main = () => {
     console.log(posts)
     console.log(m)
     console.log(d)
+
     const results = posts.filter((post) => {
-      if(post.day == d && post.month == m){
+      if (post.day == d && post.month == m) {
         return true;
-      }else{
+      } else {
         return false;
       }
-    })
+    });
     let modal = document.getElementById("modal");
     let first = document.getElementById("questionOneValue");
-    console.log(results)
-    console.log(results[0].questionOneAnswer);
-    first.innerHTML = results[0].questionOneAnswer;
+    let second = document.getElementById("questionTwoValue");
+    let third = document.getElementById("questionThreeValue");
+    let four = document.getElementById("questionFourValue");
+    let five = document.getElementById("questionFiveValue");
+    let six = document.getElementById("questionSixValue");
+    let seven = document.getElementById("questionSevenValue");
+    let eight = document.getElementById("questionEightValue");
+    let date = document.getElementById("date");
+    if (results[0]) {
+      first.innerHTML = results[0].questionOneAnswer;
+      second.innerHTML = results[0].questionTwoAnswer;
+      third.innerHTML = results[0].questionThreeAnswer;
+      four.innerHTML = results[0].questionFourAnswer;
+      five.innerHTML = results[0].questionFiveAnswer;
+      six.innerHTML = results[0].questionSixAnswer;
+      seven.innerHTML = results[0].questionSevenAnswer;
+      eight.innerHTML = results[0].questionEightAnswer;
+      date.innerHTML = "2" + "/" + d + "/2023";
+    }else{
+      first.innerHTML = "No Response Recorded";
+      second.innerHTML = "No Response Recorded";
+      third.innerHTML = "No Response Recorded";
+      four.innerHTML = "No Response Recorded";
+      five.innerHTML = "No Response Recorded";
+      six.innerHTML = "No Response Recorded";
+      seven.innerHTML = "No Response Recorded";
+      eight.innerHTML = "No Response Recorded";
+      date.innerHTML = "2" + "/" + d + "/2023";
+    }
+
     modal.classList.add("show");
+  }
+
+  function switchShow() {
+    let modal = document.getElementById("modal");
+    modal.classList.remove("show");
   }
 
   return (
@@ -130,50 +163,70 @@ const Main = () => {
             </div>
 
           <div className="innerMain">
-              <h1 id="lastSeven">Weekly Submissions</h1>
-              <br></br>
-              <div className="formBoxes">
-                <div className="formBox">
-                  <div id="month">{month}</div>
-                  <div id="day">{day-6}</div>
-                </div>
-                <div className="formBox">
-                  <div id="month">{month}</div>
-                  <div id="day">{day-5}</div>
-                </div>
-                <div className="formBox">
-                  <div id="month">{month}</div>
-                  <div id="day">{day-4}</div>
-                </div>
-                <div className="formBox">
-                  <div id="month">{month}</div>
-                  <div id="day">{day-3}</div>
-                </div>
-                <div className="formBox">
-                  <div id="month">{month}</div>
-                  <div id="day">{day-2}</div>
-                </div>
-                <div className="formBox">
-                  <div id="month">{month}</div>
-                  <div id="day">{day-1}</div>
-                </div>
-                <div className="formBox" onClick={() => openForm(month, day)}>
-                  <div id="month">{month}</div>
-                  <div id="day">{day}</div>
-                </div>
+            <h1 id="lastSeven">Weekly Submissions</h1>
+            <br></br>
+            <div className="formBoxes">
+              <div className="formBox" onClick={() => openForm(month, day-6)}>
+                <div id="month">{month}</div>
+                <div id="day">{day - 6}</div>
               </div>
-              <Form />
-              <div className="modal" id="modal">
-                  <div>
-                    <p id="questionOneValue"></p>
-                    <p id="questionTwoValue"></p>
-                    <p id="questionThreeValue"></p>
-                  </div>
+              <div className="formBox" onClick={() => openForm(month, day-5)}>
+                <div id="month">{month}</div>
+                <div id="day">{day - 5}</div>
+              </div>
+              <div className="formBox" onClick={() => openForm(month, day-4)}>
+                <div id="month">{month}</div>
+                <div id="day">{day - 4}</div>
+              </div>
+              <div className="formBox" onClick={() => openForm(month, day-3)}>
+                <div id="month">{month}</div>
+                <div id="day">{day - 3}</div>
+              </div>
+              <div className="formBox" onClick={() => openForm(month, day-2)}>
+                <div id="month">{month}</div>
+                <div id="day">{day - 2}</div>
+              </div>
+              <div className="formBox" onClick={() => openForm(month, day-1)}>
+                <div id="month">{month}</div>
+                <div id="day">{day - 1}</div>
+              </div>
+              <div className="formBox" onClick={() => openForm(month, day)}>
+                <div id="month">{month}</div>
+                <div id="day">{day}</div>
+              </div>
+            </div>
+            <Form />
+            <div className="modal" id="modal">
+              <h1 id="date"></h1>
+              <p id="X" onClick={switchShow}>
+                X
+              </p>
+              <div>
+                <h3>1. How satisfied am I with myself today?</h3>
+                <p id="questionOneValue"></p>
+                <h3>2. Am I feeling content and peaceful today?</h3>
+                <p id="questionTwoValue"></p>
+                <h3>3. Do I feel optimistic about the future? </h3>
+                <p id="questionThreeValue"></p>
+                <h3>4. What are my overall energy levels right now?</h3>
+                <p id="questionFourValue"></p>
+                <h3>5. Am I worried or anxious about anything today? </h3>
+                <p id="questionFiveValue"></p>
+                <h3>6. Frequency of negative thoughts?</h3>
+                <p id="questionSixValue"></p>
+                <h3>7. Do I feel connected to myself and others around me? </h3>
+                <p id="questionSevenValue"></p>
+                <h3>8. How anxious was I today?</h3>
+                <p id="questionEightValue"></p>
               </div>
             </div>
           </div>
+          <button onClick={handleSignOut} className="logoutBtn">
+            Logout
+          </button>
         </div>
       </div>
+    </div>
   );
 };
 export default Main;
