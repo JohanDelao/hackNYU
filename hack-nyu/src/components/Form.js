@@ -1,6 +1,7 @@
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "../firebase";
+import { auth, db } from "../firebase";
 import {useState} from "react";
+import {useAuthState} from 'react-firebase-hooks/auth'
 
 
 export default function Form(){
@@ -13,12 +14,13 @@ export default function Form(){
     const [question7, setQuestion7] = useState(0);
     const [question8, setQuestion8] = useState(0);
 
+    const [user, loading] = useAuthState(auth)
+
     function updateQuestionOne(){
         let slider = document.getElementById("questionOne").value;
         setQuestion1( () => {
           return slider;
         })
-        console.log(question1)
     }
     function updateQuestionTwo(){
         let slider = document.getElementById("questionTwo").value;
@@ -65,7 +67,12 @@ export default function Form(){
 
     const submitPost = async (e) => {
         e.preventDefault();
-        console.log("works")
+        const date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        let currentDate = `${month}-${day}-${year}`;
         // Make a new form
         const collectionRef = collection(db, 'posts')
         await addDoc(collectionRef,{
@@ -78,6 +85,48 @@ export default function Form(){
             questionSixAnswer: question6,
             questionSevenAnswer: question7,
             questionEightAnswer: question8,
+            user: user.uid,
+            date: currentDate,
+        });
+        setQuestion1( () => {
+            let slider = document.getElementById("questionOne");
+            slider.value = 0;
+            return 0
+        });
+        setQuestion2( () => {
+            let slider = document.getElementById("questionTwo");
+            slider.value = 0;
+            return 0
+        });
+        setQuestion3( () => {
+            let slider = document.getElementById("questionThree");
+            slider.value = 0;
+            return 0
+        });
+        setQuestion4( () => {
+            let slider = document.getElementById("questionFour");
+            slider.value = 0;
+            return 0
+        });
+        setQuestion5( () => {
+            let slider = document.getElementById("questionFive");
+            slider.value = 0;
+            return 0
+        });
+        setQuestion6( () => {
+            let slider = document.getElementById("questionSix");
+            slider.value = 0;
+            return 0
+        });
+        setQuestion7( ()=>{
+            let slider = document.getElementById("questionSeven");
+            slider.value = 0;
+            return 0
+        });
+        setQuestion8(()=>{
+            let slider = document.getElementById("questionEight");
+            slider.value = 0;
+            return 0
         });
     };
     return (
