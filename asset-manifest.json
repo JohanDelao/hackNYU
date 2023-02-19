@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hackNYU/static/css/main.b6cb92e5.css",
+    "main.js": "/hackNYU/static/js/main.3a5b8270.js",
+    "static/js/787.909ae9bd.chunk.js": "/hackNYU/static/js/787.909ae9bd.chunk.js",
+    "index.html": "/hackNYU/index.html",
+    "main.b6cb92e5.css.map": "/hackNYU/static/css/main.b6cb92e5.css.map",
+    "main.3a5b8270.js.map": "/hackNYU/static/js/main.3a5b8270.js.map",
+    "787.909ae9bd.chunk.js.map": "/hackNYU/static/js/787.909ae9bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6cb92e5.css",
+    "static/js/main.3a5b8270.js"
+  ]
+}
