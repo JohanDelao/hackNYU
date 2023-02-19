@@ -31,9 +31,9 @@ const Main = () => {
     return unsubscribe;
   };
 
-  useEffect(() =>{
+  useEffect(() => {
     getData();
-  }, [person, loading])
+  }, [person, loading]);
 
   const handleSignOut = async () => {
     try {
@@ -73,57 +73,46 @@ const Main = () => {
           </div>
 
           <div className="innerMain">
-            <h1 id="lastSeven">Last 7 Days</h1>
-            <div className="formBoxes">
-              {posts.map((post) => {
-                return <Message {...post}>
-                  <div>
-                    <p>{post.timestamp}</p>
-                  </div>
-                </Message>
-              })}
+              <h1 id="lastSeven">Weekly Submissions</h1>
+              <br></br>
+              <div className="formBoxes">
+                <div className="formBox">
+                  <div id="month">feb</div>
+                  <div id="day">18</div>
+                </div>
+                <div className="formBox">
+                  <div id="month">feb</div>
+                  <div id="day">19</div>
+                </div>
+                <div className="formBox">
+                  <div id="month">feb</div>
+                  <div id="day">20</div>
+                </div>
+                <div className="formBox">
+                  <div id="month">feb</div>
+                  <div id="day">21</div>
+                </div>
+                <div className="formBox">
+                  <div id="month">feb</div>
+                  <div id="day">22</div>
+                </div>
+                <div className="formBox">
+                  <div id="month">feb</div>
+                  <div id="day">23</div>
+                </div>
+                <div className="formBox">
+                  <div id="month">feb</div>
+                  <div id="day">24</div>
+                </div>
+              </div>
+              <Form />
             </div>
-            <div className="innerMain">
-                                <h1 id="lastSeven">Weekly Submissions</h1>
-                                <br></br>
-                                <div className="formBoxes">
-                                    <div className="formBox">
-                                        <div id="month">feb</div>
-                                        <div id="day">18</div>
-                                    </div>
-                                    <div className="formBox">
-                                        <div id="month">feb</div>
-                                        <div id="day">19</div>
-                                    </div>
-                                    <div className="formBox">
-                                        <div id="month">feb</div>
-                                        <div id="day">20</div>
-                                    </div>
-                                    <div className="formBox">
-                                        <div id="month">feb</div>
-                                        <div id="day">21</div>
-                                    </div>
-                                    <div className="formBox">
-                                        <div id="month">feb</div>
-                                        <div id="day">22</div>
-                                    </div>
-                                    <div className="formBox">
-                                        <div id="month">feb</div>
-                                        <div id="day">23</div>
-                                    </div>
-                                    <div className="formBox">
-                                        <div id="month">feb</div>
-                                        <div id="day">24</div>
-                                    </div>
-                                </div>
-                                <Form />
-                            </div>
-                            <button onClick={handleSignOut} className="logoutBtn">
-                Logout
-              </button>
+            <button onClick={handleSignOut} className="logoutBtn">
+              Logout
+            </button>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 export default Main;
