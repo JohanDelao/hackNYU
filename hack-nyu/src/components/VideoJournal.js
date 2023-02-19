@@ -4,7 +4,7 @@ import { UserAuth } from "../context/GoogleAuth";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 
 export default function VideoJournal() {
-  const { logOut, user } = UserAuth();
+  const { user } = UserAuth();
   const webcamRef = useRef(null);
   const mediaRecorderRef = useRef(null);
   const [capturing, setCapturing] = useState(false);
