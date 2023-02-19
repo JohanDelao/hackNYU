@@ -152,44 +152,44 @@ export default function Form(){
             <form className="formANQ">
                 <div className="leftQuestion">
                     <div className="questionSection">
-                        <p className="question">This is a question</p>
-                        <input type="range" min="1" max="10" id="questionOne" defaultValue={question1} onInput={updateQuestionOne} class="slider" />
+                        <p className="question">How satisfied am I with myself today?</p>
+                        <input type="range" min="1" max="10"id="questionOne" defaultValue={question1} onInput={updateQuestionOne} class="slider" />
                     </div>
                     <div className="questionSection">
-                        <p className="question">This is a question 2</p>
+                        <p className="question">Am I feeling content and peaceful today?</p>
                         <input type="range" min="1" max="10" id="questionTwo" defaultValue={question2} onInput={updateQuestionTwo} class="slider" />
                     </div>
                     <div className="questionSection">
-                        <p className="question">This is a question 3</p>
+                        <p className="question">Do I feel optimistic about the future?</p>
                         <input type="range" min="1" max="10" id="questionThree" defaultValue={question3} onInput={updateQuestionThree} class="slider" />
                     </div>
                     <div className="questionSection">
-                        <p className="question">This is a question 4</p>
+                        <p className="question">Overall energy levels right now</p>
                         <input type="range" min="1" max="10" id="questionFour" defaultValue={question4} onInput={updateQuestionFour} class="slider" />
                     </div>
                 </div>
                 <div className="rightSection">
                     <div className="questionSection">
-                        <p className="question">This is a question 5</p>
+                        <p className="question">Am I worried or anxious about anything today?</p>
                         <input type="range" min="1" max="10" id="questionFive" defaultValue={question5} onInput={updateQuestionFive} class="slider" />
                     </div>
                     <div className="questionSection">
-                        <p className="question">This is a question 6</p>
+                        <p className="question">Frenquecy of negative questions</p>
                         <input type="range" min="1" max="10" id="questionSix" defaultValue={question6} onInput={updateQuestionSix} class="slider" />
                     </div>
                     <div className="questionSection">
-                        <p className="question">This is a question 7</p>
+                        <p className="question">Do I feel connected to myself and others around me?</p>
                         <input type="range" min="1" max="10" id="questionSeven" defaultValue={question7} onInput={updateQuestionSeven} class="slider" />
                     </div>
                     <div className="questionSection">
-                        <p className="question">This is a question 8</p>
+                        <p className="question">How anxious was I today?</p>
                         <input type="range" min="1" max="10" id="questionEight" defaultValue={question8} onInput={updateQuestionEight} class="slider" />
                     </div>
                 </div>
             </form>
             <div className="buttonSection">
                 <button onClick={goToVideoTest} id="videoButton">
-                    VideoTest
+                    Record Journal
                 </button>
                 <button id="submitButton" onClick={submitPost}>Submit Form</button>
             </div>
