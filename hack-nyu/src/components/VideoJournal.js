@@ -76,7 +76,7 @@ export default function VideoJournal() {
     <div className="Container">
       <Webcam
         height={400}
-        width={300}
+        width={500}
         audio={true}
         muted={true}
         mirrored={true}
@@ -84,11 +84,11 @@ export default function VideoJournal() {
         videoConstraints={videoConstraints}
       />
       {capturing ? (
-        <button onClick={handleStopCaptureClick}>Stop Recording</button>
+        <button onClick={handleStopCaptureClick} className="recordBtn">Stop Recording</button>
       ) : (
-        <button onClick={handleStartCaptureClick}>Start Recording</button>
+        <button onClick={handleStartCaptureClick} className="recordBtn">Start Recording</button>
       )}
-      {recordedChunks.length > 0 && <button onClick={handleSave}>Save</button>}
+      {recordedChunks.length > 0 && <button onClick={handleSave} className="logoutBtn">Save</button>}
     </div>
   );
 }

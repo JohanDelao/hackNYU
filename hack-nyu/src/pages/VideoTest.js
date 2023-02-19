@@ -40,7 +40,7 @@ const VideoTest = () => {
           <li></li>
         </ul>
 
-        <div className="login-card">
+        <div className="video-card">
           <div>
             <VideoJournal />
             <button onClick={handleSignOut} className="logoutBtn">
