@@ -4,6 +4,7 @@ import Protected from './components/Protected';
 import { AuthContextProvider } from './context/GoogleAuth';
 import Login from './pages/Login';
 import Main from './pages/Main'
+import VideoTest from './pages/VideoTest';
 
 
 function App() {
@@ -18,6 +19,14 @@ function App() {
           element={
             <Protected>
               <Main />
+            </Protected>
+          }
+        />
+        <Route
+          path='/VideoTest'
+          element={
+            <Protected>
+              <VideoTest />
             </Protected>
           }
         />

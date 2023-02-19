@@ -15,13 +15,13 @@ const Main = () => {
     }
   };
 
-  /*const goToGroup = async () => {
+  const goToVideoTest = async () => {
     try {
-      navigate('/group')
+      navigate('/VideoTest')
     } catch (error) {
       console.log(error);
     }
-  };*/
+  };
 
   return (
     <div className='body1'>
@@ -40,16 +40,14 @@ const Main = () => {
                         </ul>
                         
             
-        <div className="login-card">
+        <div className="main-card">
             
             <div>
-              <p className="welcome">Welcome, {user?.displayName}</p>
-              <button onClick={handleSignOut} className="logoutBtn">
-                Logout
-              </button>
+              <h1 className="welcome">Welcome, {user?.displayName}</h1>
+              
             </div>
             
-            /*<div className="innerMain">
+            <div className="innerMain">
                                 <h1 id="lastSeven">Last 7 Days</h1>
                                 <div className="formBoxes">
                                     <div className="formBox">2/18/2023</div>
@@ -61,8 +59,13 @@ const Main = () => {
                                     <div className="formBox">2/18/2023</div>
                                 </div>
                                 <Form />
-                            </div>*/
-            
+                            </div>
+                            <button onClick={handleSignOut} className="logoutBtn">
+                Logout
+              </button>
+              <button onClick={goToVideoTest} className="logoutBtn">
+                VideoTest
+              </button>
         </div>
         
         
