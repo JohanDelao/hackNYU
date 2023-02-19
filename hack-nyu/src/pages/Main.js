@@ -128,10 +128,6 @@ const Main = () => {
                 </button>
               </div>
             </div>
-            
-          <div>
-            <h1 className="welcome">Welcome, {user?.displayName}</h1>
-          </div>
 
           <div className="innerMain">
               <h1 id="lastSeven">Weekly Submissions</h1>
@@ -175,9 +171,6 @@ const Main = () => {
                   </div>
               </div>
             </div>
-            <button onClick={handleSignOut} className="logoutBtn">
-              Logout
-            </button>
           </div>
         </div>
       </div>
