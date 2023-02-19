@@ -43,6 +43,14 @@ const Main = () => {
     }
   };
 
+  const handleAccount = async () => {
+    try {
+      navigate('/Account')
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const goToVideoTest = async () => {
     try {
       navigate("/VideoTest");
@@ -72,10 +80,11 @@ const Main = () => {
   //   return unsubscribe;
   // }
 
-  function openForm(m, d) {
-    console.log(posts);
-    console.log(m);
-    console.log(d);
+  function openForm(m, d){ 
+    console.log(posts)
+    console.log(m)
+    console.log(d)
+
     const results = posts.filter((post) => {
       if (post.day == d && post.month == m) {
         return true;
@@ -140,9 +149,18 @@ const Main = () => {
         </ul>
 
         <div className="main-card">
-          <div>
-            <h1 className="welcome">Welcome, {user?.displayName}</h1>
-          </div>
+            
+            <div id="navbar">
+              <h1 className="welcome">Welcome, {user?.displayName}</h1>
+              <div id="navbarBtn-container">
+                <button onClick={handleSignOut} className="navbarBtn">
+                  Logout
+                </button>
+                <button onClick={handleAccount} className="navbarBtn">
+                  Account
+                </button>
+              </div>
+            </div>
 
           <div className="innerMain">
             <h1 id="lastSeven">Weekly Submissions</h1>
