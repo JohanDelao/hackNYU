@@ -83,14 +83,44 @@ const Main = () => {
                 </Message>
               })}
             </div>
-            <Form />
-          </div>
-          <button onClick={handleSignOut} className="logoutBtn">
-            Logout
-          </button>
-          <button onClick={goToVideoTest} className="logoutBtn">
-            VideoTest
-          </button>
+            <div className="innerMain">
+                                <h1 id="lastSeven">Weekly Submissions</h1>
+                                <br></br>
+                                <div className="formBoxes">
+                                    <div className="formBox">
+                                        <div id="month">feb</div>
+                                        <div id="day">18</div>
+                                    </div>
+                                    <div className="formBox">
+                                        <div id="month">feb</div>
+                                        <div id="day">19</div>
+                                    </div>
+                                    <div className="formBox">
+                                        <div id="month">feb</div>
+                                        <div id="day">20</div>
+                                    </div>
+                                    <div className="formBox">
+                                        <div id="month">feb</div>
+                                        <div id="day">21</div>
+                                    </div>
+                                    <div className="formBox">
+                                        <div id="month">feb</div>
+                                        <div id="day">22</div>
+                                    </div>
+                                    <div className="formBox">
+                                        <div id="month">feb</div>
+                                        <div id="day">23</div>
+                                    </div>
+                                    <div className="formBox">
+                                        <div id="month">feb</div>
+                                        <div id="day">24</div>
+                                    </div>
+                                </div>
+                                <Form />
+                            </div>
+                            <button onClick={handleSignOut} className="logoutBtn">
+                Logout
+              </button>
         </div>
       </div>
     </div>

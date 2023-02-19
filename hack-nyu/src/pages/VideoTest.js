@@ -1,7 +1,8 @@
-import React from 'react';
-import { UserAuth } from '../context/GoogleAuth';
-import { useNavigate } from 'react-router-dom';
-import Form from "../components/Form"
+import React from "react";
+import { UserAuth } from "../context/GoogleAuth";
+import { useNavigate } from "react-router-dom";
+import Form from "../components/Form";
+import VideoJournal from "../components/VideoJournal";
 
 const VideoTest = () => {
   const { logOut, user } = UserAuth();
@@ -17,45 +18,40 @@ const VideoTest = () => {
 
   const handleBack = async () => {
     try {
-      navigate('/Main')
+      navigate("/Main");
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <div className='body1'>
-      <div className="area" >
-                        <ul className="circles">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                        </ul>
-                        
-            
+    <div className="body1">
+      <div className="area">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
         <div className="login-card">
-            
-            <div>
-              <button onClick={handleSignOut} className="logoutBtn">
-                Logout
-              </button>
-              <button onClick={handleBack} className="logoutBtn">
-                Back
-              </button>
-            </div>
-            
-            
+          <div>
+            <VideoJournal />
+            <button onClick={handleSignOut} className="logoutBtn">
+              Logout
+            </button>
+            <button onClick={handleBack} className="logoutBtn">
+              Back
+            </button>
+          </div>
         </div>
-        
-        
-      </div >
+      </div>
     </div>
   );
 };

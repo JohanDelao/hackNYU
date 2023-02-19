@@ -2,6 +2,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "../firebase";
 import {useState} from "react";
 import {useAuthState} from 'react-firebase-hooks/auth'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Form(){
@@ -129,6 +130,15 @@ export default function Form(){
             return 0
         });
     };
+    const navigate = useNavigate();
+
+    const goToVideoTest = async () => {
+        try {
+          navigate('/VideoTest')
+        } catch (error) {
+          console.log(error);
+        }
+      };
     return (
         <div className="innerForm">
             <h1 id="formTitle">Today's Daily Form</h1>
@@ -171,7 +181,10 @@ export default function Form(){
                 </div>
             </form>
             <div className="buttonSection">
-                <button id="submitButton" onClick={submitPost} type="submit">Submit Form</button>
+                <button onClick={goToVideoTest} id="videoButton">
+                    VideoTest
+                </button>
+                <button id="submitButton">Submit Form</button>
             </div>
         </div>
     )
