@@ -66,14 +66,20 @@ export default function Form(){
         })
     }
 
+    function getMonthName(monthNumber) {
+        const date = new Date();
+        date.setMonth(monthNumber - 1);
+      
+        return date.toLocaleString('en-US', { month: 'long' });
+      }
+
     const submitPost = async (e) => {
         e.preventDefault();
         const date = new Date();
         let day = date.getDate();
         let month = date.getMonth() + 1;
-        let year = date.getFullYear();
-
-        let currentDate = `${month}-${day}-${year}`;
+        month = getMonthName(month).toLowerCase();
+        month = month[0] + month[1] + month[2];
         // Make a new form
         const collectionRef = collection(db, 'posts')
         await addDoc(collectionRef,{
@@ -87,7 +93,8 @@ export default function Form(){
             questionSevenAnswer: question7,
             questionEightAnswer: question8,
             user: user.uid,
-            date: currentDate,
+            month: month,
+            day: day,
         });
         setQuestion1( () => {
             let slider = document.getElementById("questionOne");
@@ -184,7 +191,7 @@ export default function Form(){
                 <button onClick={goToVideoTest} id="videoButton">
                     VideoTest
                 </button>
-                <button id="submitButton">Submit Form</button>
+                <button id="submitButton" onClick={submitPost}>Submit Form</button>
             </div>
         </div>
     )
