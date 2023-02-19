@@ -26,7 +26,7 @@ const VideoTest = () => {
 
   return (
     <div className="body1">
-      <div className="area">
+      <div className="area2">
         <ul className="circles">
           <li></li>
           <li></li>

@@ -43,6 +43,14 @@ const Main = () => {
     }
   };
 
+  const handleAccount = async () => {
+    try {
+      navigate('/Account')
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const goToVideoTest = async () => {
     try {
       navigate("/VideoTest");
@@ -108,6 +116,19 @@ const Main = () => {
         </ul>
 
         <div className="main-card">
+            
+            <div id="navbar">
+              <h1 className="welcome">Welcome, {user?.displayName}</h1>
+              <div id="navbarBtn-container">
+                <button onClick={handleSignOut} className="navbarBtn">
+                  Logout
+                </button>
+                <button onClick={handleAccount} className="navbarBtn">
+                  Account
+                </button>
+              </div>
+            </div>
+            
           <div>
             <h1 className="welcome">Welcome, {user?.displayName}</h1>
           </div>
