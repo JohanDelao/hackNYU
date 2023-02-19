@@ -221,9 +221,6 @@ const Main = () => {
               </div>
             </div>
           </div>
-          <button onClick={handleSignOut} className="logoutBtn">
-            Logout
-          </button>
         </div>
       </div>
     </div>
