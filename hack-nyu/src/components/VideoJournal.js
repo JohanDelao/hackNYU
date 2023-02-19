@@ -1,8 +1,10 @@
 import React, { useCallback, useRef, useState } from "react";
 import Webcam from "react-webcam";
+import { UserAuth } from "../context/GoogleAuth";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 
 export default function VideoJournal() {
+  const { user } = UserAuth();
   const webcamRef = useRef(null);
   const mediaRecorderRef = useRef(null);
   const [capturing, setCapturing] = useState(false);
@@ -17,7 +19,7 @@ export default function VideoJournal() {
   let currentDate = `${month}-${day}-${year}`;
 
   const storage = getStorage();
-  const storageRef = ref(storage, currentDate);
+  const storageRef = ref(storage, currentDate + " " + user?.displayName);
 
   const handleDataAvailable = useCallback(
     ({ data }) => {
@@ -76,7 +78,7 @@ export default function VideoJournal() {
     <div className="Container">
       <Webcam
         height={400}
-        width={300}
+        width={500}
         audio={true}
         muted={true}
         mirrored={true}
@@ -84,11 +86,11 @@ export default function VideoJournal() {
         videoConstraints={videoConstraints}
       />
       {capturing ? (
-        <button onClick={handleStopCaptureClick}>Stop Recording</button>
+        <button onClick={handleStopCaptureClick} className="recordBtn">Stop Recording</button>
       ) : (
-        <button onClick={handleStartCaptureClick}>Start Recording</button>
+        <button onClick={handleStartCaptureClick} className="recordBtn">Start Recording</button>
       )}
-      {recordedChunks.length > 0 && <button onClick={handleSave}>Save</button>}
+      {recordedChunks.length > 0 && <button onClick={handleSave} className="logoutBtn">Save</button>}
     </div>
   );
 }

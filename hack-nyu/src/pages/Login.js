@@ -38,7 +38,8 @@ const Login = () => {
                                 <li></li>
                         </ul>
                         <div className="login-card">
-                            <h2>Welcome to ZenMind</h2>
+                            <h2>Welcome to ZenDoc</h2>
+                            <img src="../images/zenDocLogo.PNG" id="logo"/>
                             <h2>Login</h2>
                             <h3>Enter your credentials</h3>
                             <div id="google">
