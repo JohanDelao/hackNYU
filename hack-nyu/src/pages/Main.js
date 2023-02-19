@@ -1,7 +1,7 @@
-import React from 'react';
-import { UserAuth } from '../context/GoogleAuth';
-import { useNavigate } from 'react-router-dom';
-import Form from "../components/Form"
+import React from "react";
+import { UserAuth } from "../context/GoogleAuth";
+import { useNavigate } from "react-router-dom";
+import Form from "../components/Form";
 
 const Main = () => {
   const { logOut, user } = UserAuth();
@@ -67,9 +67,7 @@ const Main = () => {
                 VideoTest
               </button>
         </div>
-        
-        
-      </div >
+      </div>
     </div>
   );
 };
