@@ -308,7 +308,7 @@
   margin-bottom: 2rem;
 }
 .question{
-  font-size: 18px;
+  font-size: 14px;
   font-weight: medium;
   margin-bottom: .5rem;
   text-align: center;
@@ -329,7 +329,7 @@
   padding: 10px;
   border: 1px solid black;
   font-family: 'Inter', sans-serif;
-  background: #D9D9D9;
+  background: #7CB9E8;
   color: white;
   border-radius: 10px;
   font-size: 15px;
@@ -342,7 +342,7 @@
   padding: 10px;
   border: 1px solid black;
   font-family: 'Inter', sans-serif;
-  background: #D9D9D9;
+  background: #7CB9E8;
   color: white;
   border-radius: 10px;
   font-size: 15px;
@@ -371,6 +371,8 @@
   top: 15rem;
   background-color: white;
   display: none;
+  padding: 1rem;
+  border: 2px solid black;
 }
 .modal.show{
   display: block;
@@ -435,4 +437,20 @@
 .accountContainer {
     display: flex;
     justify-content: space-around;
+}
+.modal h3{
+  text-align: left;
+  font-weight: 600;
+}
+.modal p{
+  text-align: left;
+}
+#date{
+  margin-bottom: 1rem;
+}
+#X{
+  position: fixed;
+  top: 16rem;
+  right: 29rem;
+  cursor: pointer;
 }

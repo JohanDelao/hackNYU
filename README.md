@@ -1,5 +1,5 @@
 # Welcome to ZenDoc
-<img src="" />
+<img src="https://github.com/JohanDelao/hackNYU/blob/main/hack-nyu/public/images/zenDocLogo.PNG" />
 
 ## Table of contents
 * [General info](#general-info)
@@ -29,6 +29,7 @@ This project is created with:
 * Login Page - demonstrates Google's user authentication feature from Firebase that allows users to login/register with their gmail credentials
 * Home Page - welcomes the user by their name associated with their gmail account, displays a weekly calendar that shows daily submissions when clicked, a daily form questionaire, a video record button that routes the user to the video sumbission page, a submit form button that submits the daily questionaire, and a functional logout button
 * Video Submission Page - displays a video feature that allows a user to record and save their journal video submission, a back button to traverse back to the Main page, and a functional logout button
+* Account Page - displays users account information along with their primary care providers info
 
 ## Figma Design
 Blueprint:
