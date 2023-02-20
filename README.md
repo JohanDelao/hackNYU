@@ -14,7 +14,7 @@
 
 
 ## General info
-ZenDoc is a Healthcare web application that brigdes the gap between appointments. Users are able to track their mental health through answering a daily questionaire along with a video submission. This allows for their doctor to track their progress in between appointments, which will lead to a more accurate analysis of their patients condition. This will revolutionize the Healthcare industry with more precise data that will increase the accuracy of diagnoses.
+ZenDoc is a Healthcare web application that bridges the gap between appointments. Users are able to track their mental health by answering a daily questionnaire along with a video submission. This allows their doctor to track their progress in between appointments, which will lead to a more accurate analysis of their patients' condition. This will revolutionize the Healthcare industry with more precise data that will increase the accuracy of diagnoses.
 
 ## Technologies
 This project is created with:
@@ -26,8 +26,8 @@ This project is created with:
 ## Functionality
 <b />
 
-* Login Page - demonstrates Google's user authentication feature from Firebase that allows users to login/register with their gmail credentials
-* Home Page - welcomes the user by their name associated with their gmail account, displays a weekly calendar that shows daily submissions when clicked, a daily form questionaire, a video record button that routes the user to the video sumbission page, a submit form button that submits the daily questionaire, and a functional logout button
+* Login Page - demonstrates Google's user authentication feature from Firebase that allows users to login/register with their Gmail credentials
+* Home Page - welcomes the user by their name associated with their Gmail account, displays a weekly calendar that shows daily submissions when clicked, a daily form questionnaire, a video record button that routes the user to the video submission page, a submit form button that submits the daily questionnaire and a functional logout button
 * Video Submission Page - displays a video feature that allows a user to record and save their journal video submission, a back button to traverse back to the Main page, and a functional logout button
 * Account Page - displays users account information along with their primary care providers info
 
