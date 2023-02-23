@@ -9,7 +9,7 @@
 * [Video Demonstration](#video-demonstration)
 * [Setup](#setup)
 * [Learn More](#learn-more)
-*[License](#license)
+* [License](#license)
 
 
 
